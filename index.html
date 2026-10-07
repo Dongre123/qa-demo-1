@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login App</title>
+</head>
+
+<body>
+
+    <h2>Login Application</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <br><br>
+
+    <input type="password" id="password" placeholder="Password">
+    <br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "admin" && password == "admin123") {
+                document.getElementById("message").innerHTML = "Login Successful";
+            } else {
+                document.getElementById("message").innerHTML = "Invalid Login";
+            }
+        }
+    </script>
+
+</body>
+</html>
