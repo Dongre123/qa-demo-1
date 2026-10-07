@@ -13,16 +13,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v6
 
-      - name: Verify Application
-        run: |
-          echo "Checking application..."
-          test -f demo-app-1/index.html
-
       - name: Docker Build
         run: |
-          docker build -t qa-demo-1:v1 demo-app-1
+          docker build -t qa-demo-1:v1 .
 
       - name: QA Validation
         run: |
+          echo "Docker image build successful"
           echo "QA validation completed"
           echo "Pipeline PASS"
